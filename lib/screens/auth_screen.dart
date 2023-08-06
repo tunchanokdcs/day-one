@@ -29,7 +29,7 @@ class _AuthScreenState extends State<AuthScreen> {
       stream: user,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return MainScreen();
+          return MainScreen(auth: auth);
         }
 
         return LoginScreen(auth: auth,);
